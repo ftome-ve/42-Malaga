@@ -6,17 +6,18 @@
 /*   By: ftome-ve <ftome-ve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:59:43 by ftome-ve          #+#    #+#             */
-/*   Updated: 2023/11/30 18:16:25 by ftome-ve         ###   ########.fr       */
+/*   Updated: 2023/12/10 18:29:28 by ftome-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(const char *s)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	while (s[i] != '\0')
 	{
-	i++;
+		i++;
 	}
 	return (i);
 }

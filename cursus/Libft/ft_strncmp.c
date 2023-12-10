@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ftome-ve <ftome-ve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/30 16:47:51 by ftome-ve          #+#    #+#             */
-/*   Updated: 2023/11/30 18:21:41 by ftome-ve         ###   ########.fr       */
+/*   Created: 2023/12/10 18:11:43 by ftome-ve          #+#    #+#             */
+/*   Updated: 2023/12/10 18:11:57 by ftome-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
