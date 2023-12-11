@@ -6,7 +6,7 @@
 /*   By: ftome-ve <ftome-ve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 18:26:32 by ftome-ve          #+#    #+#             */
-/*   Updated: 2023/11/30 18:40:31 by ftome-ve         ###   ########.fr       */
+/*   Updated: 2023/12/10 19:07:01 by ftome-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int	ft_atoi(char *str)
 		return (number);
 	return (-number);
 }
+/*
 
 int	main()
 {
@@ -50,4 +51,4 @@ int	main()
 		printf("%d\n", ft_atoi(str));
 		printf("original %d\n", atoi(str));
 				return (0);
-}
+}*/

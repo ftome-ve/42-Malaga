@@ -6,39 +6,41 @@
 /*   By: ftome-ve <ftome-ve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 15:28:25 by ftome-ve          #+#    #+#             */
-/*   Updated: 2023/12/10 17:39:03 by ftome-ve         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:58:09 by ftome-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stddef.h>
 #include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+	size_t	dstlen;
+	size_t	srclen;
 	size_t	i;
-	size_t	j;
-
+	
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
 	i = 0;
-	j = 0;
-	if (dstsize < strlen(dst))
-	return (dstsize + strlen(src));
-	while (dst[i] != '\0')
+	if (dstsize == 0)
+		return (srclen);
+	
+	if (dstsize <= dstlen)
+		return (dstsize += srclen);
+	else 
+		srclen += dstlen;
+
+	while (src[i] != '\0' && dstlen < dstsize -1 && dst != src)
 	{
+		dst[dstlen] = src[i];
+		dstlen++;
 		i++;
 	}
-	while (src[j] != '\0' && i < dstsize -1)
-	{
-		dst[i] = src[j];
-		j++;
-		i++;
-	}
-	dst[i] = '\0';
-	return (i);
-}
-
-
-
+	dst[dstlen] = '\0';
+	return (srclen);
+}/*
 
 int main(void) 
 {
@@ -51,4 +53,4 @@ int main(void)
     printf("Longitud total: %zu\n", longitud_total);
 
     return 0;
-}
+}*/
